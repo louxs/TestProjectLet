@@ -1,0 +1,62 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "0.1.0",
+    "title": "letus"
+  },
+  "paths": {
+    "/api/relation/email": {
+      "post": {
+        "description": "login Relation",
+        "parameters": [
+          {
+            "name": "email",
+            "in": "formData",
+            "description": "email address of the relation",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "User"
+        ],
+        "responses": {
+          "200": {
+            "description": "success: return user"
+          }
+        }
+      }
+    },
+    "/api/users/login": {
+      "post": {
+        "description": "login Relation",
+        "parameters": [
+          {
+            "name": "email",
+            "in": "formData",
+            "description": "email address of the relation",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "password",
+            "in": "formData",
+            "description": "password",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "User"
+        ],
+        "responses": {
+          "200": {
+            "description": "success: return user + token "
+          }
+        }
+      }
+    }
+  }
+}
+
+
